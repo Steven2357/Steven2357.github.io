@@ -2,24 +2,32 @@
 <html>
     <head>
         <link href="styles/style.css" rel="stylesheet" type="text/css" />
-        <title>酷酷的舉例</title>
+        <title>1</title>
     </head>
     <body>
-        <h1>酷酷的範例題</h1>
+        <h1 id="number">1</h1>
+        <h2 id="creator">Steven Jocker</h2>
 
         <p id="hand">
-            &spades;<br>
-            <span style="color: red;">&hearts;</span>--<br>
-            <span style="color: red;">&diamondsuit;</span>--<br>
-            &clubs;AKQJT98765432
+            &spades;8<br>
+            <span style="color: red;">&hearts;</span>73<br>
+            <span style="color: red;">&diamondsuit;</span>KT973<br>
+            &clubs;AJT52
         </p>
 
         <table id="bidding">
             <tr>
-                <th style="width:10%">S</th>
-                <th style="width:10%">W</th>
-                <th style="width:10%">N</th>
-                <th style="width:10%">E</th>
+                <th style="width:10%; background-color:green;">S</th>
+                <th style="width:10%; background-color:green;">W</th>
+                <th style="width:10%; background-color:green;">N</th>
+                <th style="width:10%; background-color:green;">E</th>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td>1&spades;</td>
+                <td>P</td>
             </tr>
 
             <tr>
@@ -31,7 +39,7 @@
         </table>
 
         <p id="bids">
-            <button type="button" onclick="Incorrect()">1NT</button>
+            <button type="button" onclick="Correct()">1NT</button>
             <button type="button" onclick="Incorrect()">2NT</button>
             <button type="button" onclick="Incorrect()">3NT</button>
             <button type="button" onclick="Incorrect()">4NT</button>
@@ -78,10 +86,17 @@
             <button type="button" onclick="Incorrect()">4&clubs;</button>
             <button type="button" onclick="Incorrect()">5&clubs;</button>
             <button type="button" onclick="Incorrect()">6&clubs;</button>
-            <button type="button" onclick="Correct()">7&clubs;</button>
+            <button type="button" onclick="Incorrect()">7&clubs;</button>
             <button type="button" onclick="Incorrect()">PASS</button>
             <br>
         </p>
+
+        <p id="answer">
+            rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+        </p>
+
+        <!--<a id="Previous" href="">Previous</a>-->
+        <a id="Next" href="Q2.html">Next</a>
 
         <script src="scripts/main.js"></script>
 
