@@ -44,6 +44,11 @@ html {
     vertical-align: middle;
 }
 
+.NSEW {
+    width:130px;
+    background-color:green;
+}
+
 table, th, td{
     border: 5px solid black;
     border-collapse: collapse;
