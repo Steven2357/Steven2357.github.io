@@ -15,8 +15,8 @@ h2 {
 #creator {
     font-size: 24px;
     position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 50px;
+    right: 50px;
 }
 
 
@@ -27,19 +27,19 @@ html {
 #hand {
     position: absolute;
     font-size: 48px;
-    top: 5%;
-    left: 5%;
+    top: 24px;
+    left: 96px;
     width: 500px;
     border-style: solid;
     border-radius: 5px;
-    padding: 1%;
+    padding: 20px;
 }
 
 #bidding {
     position: absolute;
     font-size: 48px;
-    top: 12%;
-    right: 5%;
+    top: 100px;
+    right: 50px;
     text-align: center;
     vertical-align: middle;
 }
@@ -52,11 +52,11 @@ table, th, td{
 #bids {
     position: absolute;
     font-size: 24px;
-    top: 50%;
-    left: 5%;
+    top: 350px;
+    left: 96px;
     border-style: solid;
     border-radius: 5px;
-    padding: 1%;
+    padding: 20px;
 }
 
 button{
@@ -67,18 +67,18 @@ button{
 #answer {
     position: absolute;
     font-size: 24px;
-    top: 80%;
-    left: 55%;
+    top: 580px;
+    left: 750px;
     border-style: solid;
     border-radius: 5px;
-    padding: 1%;
+    padding: 20px;
 }
 
 #Previous {
     position: absolute;
     font-size: 32px;
-    top: 12%;
-    left: 45%;
+    top: 100px;
+    left: 700px;
     border-style: solid;
     border-radius: 5px;
 }
@@ -86,8 +86,8 @@ button{
 #Next {
     position: absolute;
     font-size: 32px;
-    top: 24%;
-    left: 45%;
+    top: 200px;
+    left: 700px;
     border-style: solid;
     border-radius: 5px;
 }
