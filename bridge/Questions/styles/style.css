@@ -44,9 +44,14 @@ html {
     vertical-align: middle;
 }
 
-.NSEW {
+.NVUL {
     width:130px;
     background-color:green;
+}
+
+.VUL {
+    width:130px;
+    background-color:red;
 }
 
 table, th, td{
