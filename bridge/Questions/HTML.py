@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="styles/style.css" rel="stylesheet" type="text/css" />
-        <title>8</title>
-    </head>
-    <body>
-        <h1 id="number">8</h1>
-        <h2 id="creator">Steven Jocker</h2>
+n=int(input("題號："))
+spade=input("黑桃")
+heart=input("紅心")
+diamond=input("方塊")
+club=input("梅花")
 
-        <p id="hand">
-            &spades;JT<br>
-            <span style="color: red;">&hearts;</span>KJ86<br>
-            <span style="color: red;">&diamondsuit;</span>AQ87<br>
-            &clubs;632
-        </p>
-
-        <table id="bidding">
+bidding="""        <table id="bidding">
             <tr>
                 <th class="NVUL">S</th>
                 <th class="NVUL">W</th>
@@ -24,22 +13,63 @@
             </tr>
 
             <tr>
-                <td></td>
-                <td>1&clubs;</td>
-                <td>1&spades;</td>
-                <td>P</td>
+                <td>"""
+bid=input("S:")
+while bid!="?":
+    bidding+=bid
+    bidding+="""</td>
+                <td>"""
+    bid=input("W:")
+    bidding+=bid
+    bidding+="""</td>
+                <td>"""
+    bid=input("N:")
+    bidding+=bid
+    bidding+="""</td>
+                <td>"""
+    bid=input("E:")
+    bidding+=bid
+    bidding+="""</td>
             </tr>
 
             <tr>
-                <td>?</td>
+                <td>"""
+    bid=input("S:")
+
+bidding+="""?</td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
         </table>
+"""
 
+bidding=bidding.replace("!S","&spades;")
+bidding=bidding.replace("!H","&hearts;")
+bidding=bidding.replace("!D","&diamondsuit;")
+bidding=bidding.replace("!C","&clubs;")
+
+
+text=f"""<!DOCTYPE html>
+<html>
+    <head>
+        <link href="styles/style.css" rel="stylesheet" type="text/css" />
+        <title>{n}</title>
+    </head>
+    <body>
+        <h1 id="number">{n}</h1>
+        <h2 id="creator">Steven Jocker</h2>
+
+        <p id="hand">
+            &spades;{spade}<br>
+            <span style="color: red;">&hearts;</span>{heart}<br>
+            <span style="color: red;">&diamondsuit;</span>{diamond}<br>
+            &clubs;{club}
+        </p>
+
+{bidding}
         <p id="bids">
-            <button type="button" onclick="Correct()">1NT</button>
+            <button type="button" onclick="Incorrect()">1NT</button>
             <button type="button" onclick="Incorrect()">2NT</button>
             <button type="button" onclick="Incorrect()">3NT</button>
             <button type="button" onclick="Incorrect()">4NT</button>
@@ -71,7 +101,7 @@
 
             
             <button type="button" onclick="Incorrect()">1&diamondsuit;</button>
-            <button type="button" onclick="Correct()">2&diamondsuit;</button>
+            <button type="button" onclick="Incorrect()">2&diamondsuit;</button>
             <button type="button" onclick="Incorrect()">3&diamondsuit;</button>
             <button type="button" onclick="Incorrect()">4&diamondsuit;</button>
             <button type="button" onclick="Incorrect()">5&diamondsuit;</button>
@@ -92,13 +122,18 @@
         </p>
 
         <p id="answer">
-            rrrrrrrrrrrrrrrrrrrrrr
+            rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
         </p>
 
-        <a id="Previous" href="Q7.html">Previous</a>
-        <a id="Next" href="Q9.html">Next</a>
+        <a id="Previous" href="Q{n-1}.html">Previous</a>
+        <a id="Next" href="Q{n+1}.html">Next</a>
 
         <script src="scripts/main.js"></script>
 
     </body>
-</html>
+</html>"""
+
+name=f"Q{n}.html"
+with open(name,"w") as f:
+    f.write(text)
+    print("寫入完成")
