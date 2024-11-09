@@ -144,3 +144,12 @@ name=f"Q{n}.html"
 with open(name,"w") as f:
     f.write(text)
     print("寫入完成")
+
+with open("Questions.html","r") as f:
+    text=f.read()
+
+text=text.replace("    </body>",f"""        <h2><a href="Q{n}.html">{n}</a></h2>
+    </body>""")
+
+with open("Questions.html","w") as f:
+    f.write(text)
