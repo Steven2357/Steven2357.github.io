@@ -49,26 +49,7 @@ bidding=bidding.replace("!H","&hearts;")
 bidding=bidding.replace("!D","&diamondsuit;")
 bidding=bidding.replace("!C","&clubs;")
 
-
-text=f"""<!DOCTYPE html>
-<html>
-    <head>
-        <link href="styles/style.css" rel="stylesheet" type="text/css" />
-        <title>{n}</title>
-    </head>
-    <body>
-        <h1 id="number">{n}</h1>
-        <h2 id="creator">Steven Jocker</h2>
-
-        <p id="hand">
-            &spades;{spade}<br>
-            <span style="color: red;">&hearts;</span>{heart}<br>
-            <span style="color: red;">&diamondsuit;</span>{diamond}<br>
-            &clubs;{club}
-        </p>
-
-{bidding}
-        <p id="bids">
+answer="""        <p id="bids">
             <button type="button" onclick="Incorrect()">1NT</button>
             <button type="button" onclick="Incorrect()">2NT</button>
             <button type="button" onclick="Incorrect()">3NT</button>
@@ -119,7 +100,33 @@ text=f"""<!DOCTYPE html>
             <button type="button" onclick="Incorrect()">7&clubs;</button>
             <button type="button" onclick="Incorrect()">PASS</button>
             <br>
+        </p>"""
+ans=input("正解:")
+ans=ans.replace("!S","&spades;")
+ans=ans.replace("!H","&hearts;")
+ans=ans.replace("!D","&diamondsuit;")
+ans=ans.replace("!C","&clubs;")
+answer=answer.replace(f'<button type="button" onclick="Incorrect()">{ans}</button>',f'<button type="button" onclick="Correct()">{ans}</button>')
+
+text=f"""<!DOCTYPE html>
+<html>
+    <head>
+        <link href="styles/style.css" rel="stylesheet" type="text/css" />
+        <title>{n}</title>
+    </head>
+    <body>
+        <h1 id="number">{n}</h1>
+        <h2 id="creator">Steven Jocker</h2>
+
+        <p id="hand">
+            &spades;{spade}<br>
+            <span style="color: red;">&hearts;</span>{heart}<br>
+            <span style="color: red;">&diamondsuit;</span>{diamond}<br>
+            &clubs;{club}
         </p>
+
+{bidding}
+{answer}
 
         <p id="answer">
             rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
