@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm}
+\parindent=0pt
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumerate}
+\usepackage{mathtools}
+%數學配套
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[framemethod=TikZ]{mdframed}
+
+\newenvironment{boxx}{%
+    \mdfsetup{%
+        innertopmargin=10pt,%
+        innerbottommargin=10pt,%
+        linecolor=black,%
+        linewidth=0.6pt,topline=true,%
+        frametitleaboveskip=\dimexpr-\ht\strutbox\relax}
+    \begin{mdframed}\relax}{\end{mdframed}}
+%Regularbox
+
+\newcounter{boxans} 
+\setcounter{boxans}{0}
+\renewcommand{\theboxans}{\arabic{boxans}}
+\newenvironment{boxans}[2][]{%
+    \refstepcounter{boxans}
+    \mdfsetup{%
+        innertopmargin=10pt,%
+        innerbottommargin=10pt,%
+        linecolor=black,%
+        linewidth=0.6pt,topline=true,%
+        frametitleaboveskip=\dimexpr-\ht\strutbox\relax}
+    \begin{mdframed}
+        \textbf{\textup{Answer}}\it\relax%
+    }{\end{mdframed}}
+%Answerbox
+\newcounter{boxpf} 
+\setcounter{boxpf}{0}
+\renewcommand{\theboxpf}{\arabic{boxpf}}
+\newenvironment{boxpf}[1][]{%
+    \refstepcounter{boxpf}
+    \mdfsetup{%
+        innertopmargin=10pt,%
+        innerbottommargin=10pt,%
+        linecolor=black,%
+        linewidth=0.6pt,topline=true,%
+        frametitleaboveskip=\dimexpr-\ht\strutbox\relax}
+    \begin{mdframed}
+        \textbf{\textup{Proof}}\it\relax%
+    }{\end{mdframed}}
+%Proofbox    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\pagestyle{fancy}
+\fancyhf{}
+
+\lhead{酷酷的標題}
+%\chead{} 
+%\rhead{}
+%頁上
+
+\rfoot{Steven Jocker}
+%\cfoot{}
+\lfoot{\thepage}
+%頁下
+
+\renewcommand{\headrulewidth}{0.5pt} %上線寬
+\renewcommand{\footrulewidth}{0.5pt} %上線寬
+%排版與頁面
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage{float}
+%插圖
+
+\usepackage{multirow}
+\usepackage{diagbox}
+%表格
+
+\usepackage{xeCJK}
+\XeTeXlinebreaklocale "zh"   
+\XeTeXlinebreakskip = 0pt plus 1pt 
+\setCJKfamilyfont{cwmig}{cwTeX 明體}
+%\setCJKfamilyfont{cwmig}{cwTeXKai}
+\newcommand*{\cm}{\CJKfamily{cwmig}}
+%中文配套
+
+\newtheorem{exe}{Exercise}
+\newtheorem{thm}{Theorem}
+\newtheorem{defin}{Definition}
+\newtheorem*{ans}{Answer}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{ntt}{Notation}
+\newtheorem*{pf}{Proof}
+\newtheorem*{no}{Note}
+\newtheorem{prop}{Proposition}
+\newtheorem{epl}{Example}
+\newtheorem{cor}{Corollary}
+
+\title{酷酷的標題}
+\author{Steven Jocker}
+\date{\today}
+
+%\part
+%\chapter
+%\section
+%\subsection
+%\subsubsection
+%\paragraph
+%\subparagraph
+\begin{document}
+\maketitle
+\noindent
+45-2 : \\
+
+\end{document}
